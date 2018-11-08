@@ -1,0 +1,181 @@
+/*
+  Togo Iquidus Explorer Settings for BiblePay
+
+  Guide: https://www.reddit.com/r/BiblePay/comments/7elm7r/iquidus_block_explorer_guide/
+
+  Pre-Setup: Replace XXXXXXX in this script with your own settings
+*/
+{
+  // name your instance!
+  "title": "BiblePay Explorer",
+
+  "address": "127.0.0.1:3001",
+
+  // coin name
+  "coin": "BiblePay",
+
+  // coin symbol
+  "symbol": "BBP",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Lumen",
+
+  // port to listen for requests on.
+  "port" : 3001,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "iquidus",
+    "password": "XXXXXXX",
+    "database": "explorerdb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": XXXXXXX,
+    "user": "XXXXXXX",
+    "pass": "XXXXXXX"
+  },
+
+  // confirmations
+  "confirmations": 10,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": true,
+    "facebook": false,
+    "googleplus": false,
+    "search": true,
+    "movement": false,
+    "network": true
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 20
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 1337,
+    "blockhash": "000015ac1118c3e3018326a2f726698e37d8f3134aa36c0e9b1f8664003642da",
+    "txhash": "7baaaef9613a107484f6f11e09d567e7c7da49f7156cc9da0b79ff5b15b5482a",
+    "address": "BJ3VHXEDHTZoGRrRVz8KAH1bYY586pm2v7"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "BBP",
+    "exchange": "BTC",
+    "enabled": ["ccex"],
+    "cryptopia_id": "",
+    "ccex_key" : "XXXXXXX",
+    "default": "ccex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 10000,
+    "low_flag": 100000,
+    "high_flag": 1000000
+  },
+
+  // twitter, facebook, googleplus
+  "twitter": "BiblePay",
+  "facebook": "yourfacebookpage",
+  "googleplus": "yourgooglepluspage",
+
+  //genesis
+  "genesis_tx": "02b05f3b8a7168bcf83b888e0092446b248b2641bd9844b5d12a45eaa2765725",
+  "genesis_block": "3b4431310395638c0ed65b40ede4b110d8da70fcc0c2ed4a729fb8e4d78b4452",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": true,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "TXOUTSET",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "M",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+    "BB2BwSbDCqCqNsfc7FgWFJn4sRgnUt4tsM": {"label": "Orphan Foundation", "type":"primary", "url":"http://biblepay.org"},
+    "B6jtJfhZzbqiNUXfoQ2LdHVjWVtrHSELMS": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "B6gscRo5SyR6EsR7iLdhJxtHu84ALNn93i": {"label": "C-CEX Exchange", "url":"https://c-cex.com/?p=bbp-btc"},
+    "BNvQ5Txs1riZvuKA5W7prbtwx7PuSXXBwL": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BRj3v8wh88Gxz7CNQB9CQ614zsvSo4rGBw": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "B6M8S4qK1TaQhqNBXA6LKGwLv59f1NdJXB": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BCwHbmfP7tEWXNgbYwfXX4WAKMJrkzAWUw": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BSfnH2uxp8zm8cCmdxVLji7paJz6zNPd7J": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BSJU6ShDKw9jpnBXZEBr8CVK88HCwLzdhH": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BF72gCHawYN19uhNU6tCGmmZynVczKjtkt": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BKHxE1271ZFHEUKGdyBpbWyPvutHjAcLYv": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BGqfRBvSeFn61B1tgURhR46HaqCFVsuyS1": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "B74TWhTE5aCXc2WfPfZUcgQ3mnvcqFXm7J": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BK96LRzL8td3VGTFDcSJpyu5fEhdL8Y6k3": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BCwsx3aJmo4hMcw8dNqa6CAKGhY1tAQXv5": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BLpu2s9FFs1PPjfovGgtfTD2aB43Efybuf": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "B8Q3jVnE5P5ku6HxM4XZmuD7sZow5xnbWr": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BHgeKa8UL7t6peEbgDuU5APHZ2d8ewKCch": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BJDVNCdjrGkyoiiwsGs8wGZgK7ezqKSdMX": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BNtVytCkk7NQ4oRgaAL9ughEisSnsLFXb2": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"}
+  }
+}
