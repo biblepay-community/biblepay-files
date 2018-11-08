@@ -16,6 +16,6 @@ Iquidus Block Explorer Settings
 https://github.com/togoshigekata/biblepay-files/blob/master/explorer-settings-togo.json  
 https://raw.githubusercontent.com/togoshigekata/biblepay-files/master/explorer-settings-togo.json
 
-Iquidus Block Explorer Index Resetter Script
-https://github.com/togoshigekata/biblepay-files/blob/master/explorer-index-resetter-togo.sh
+Iquidus Block Explorer Index Resetter Script  
+https://github.com/togoshigekata/biblepay-files/blob/master/explorer-index-resetter-togo.sh  
 https://raw.githubusercontent.com/togoshigekata/biblepay-files/master/explorer-index-resetter-togo.sh
