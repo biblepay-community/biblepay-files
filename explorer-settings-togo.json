@@ -43,7 +43,7 @@
   },
 
   //update script settings
-  "update_timeout": 10,
+  "update_timeout": 250,
   "check_timeout": 250,
 
   // wallet settings
@@ -159,6 +159,7 @@
   "labels": {
     "BB2BwSbDCqCqNsfc7FgWFJn4sRgnUt4tsM": {"label": "Orphan Foundation", "type":"primary", "url":"http://biblepay.org"},
     "B6jtJfhZzbqiNUXfoQ2LdHVjWVtrHSELMS": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
+    "BA3cgTBNea2jrChntZQz4fJbNFzyGtuttx": {"label": "Pure Pool", "url":"http://www.purepool.org/"},
     "B6gscRo5SyR6EsR7iLdhJxtHu84ALNn93i": {"label": "C-CEX Exchange", "url":"https://c-cex.com/?p=bbp-btc"},
     "BNvQ5Txs1riZvuKA5W7prbtwx7PuSXXBwL": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
     "BRj3v8wh88Gxz7CNQB9CQ614zsvSo4rGBw": {"label": "BiblePay Pool", "url":"http://pool.biblepay.org/"},
